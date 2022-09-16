@@ -34,6 +34,13 @@ const projectNames = [
   "Book your seat",
 ];
 
+const projectNamesLinks = [
+  "https://inventory-billing-05.netlify.app",
+  "https://find-me-05-v2.netlify.app",
+  "https://all-in-one-05.netlify.app",
+  "https://live-tv-05.netlify.app",
+];
+
 const otherProjects = [
   "Library management app",
   "Student admin app",
@@ -45,6 +52,19 @@ const otherProjects = [
   "pagination",
   "discord login page",
   "loading screen",
+];
+
+const otherProjectsLinks = [
+  "https://library-05.netlify.app/",
+  "https://student-teacher-05.netlify.app/",
+  "https://users-05.netlify.app/",
+  "https://my-movies-05.netlify.app/",
+  "https://quotes-05.netlify.app/",
+  "https://country-and-weather.netlify.app/",
+  "https://calculator-05.netlify.app/",
+  "https://pagination-05.netlify.app/",
+  "https://discord-login-1.netlify.app/",
+  "https://loading-screen-1.netlify.app/",
 ];
 
 const Projects = () => {
@@ -72,11 +92,18 @@ const Projects = () => {
               </StyledSkillText>
               <Box>{project}</Box>
               <Typography>{aboutProject[index]}</Typography>
-              <StyledButton
-                sx={{ marginBottom: "2rem", width: "7rem", height: "2.5rem" }}
+              <a
+                href={projectNamesLinks[index]}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                Visit
-              </StyledButton>
+                <StyledButton
+                  sx={{ marginBottom: "2rem", width: "7rem", height: "2.5rem" }}
+                >
+                  Visit
+                </StyledButton>
+              </a>
             </StyledSkillCard>
           </Grid>
         ))}
@@ -87,7 +114,7 @@ const Projects = () => {
       <Marquee
         pauseOnHover
         speed={100}
-        style={{ marginBottom: "3rem",height:"15rem" }}
+        style={{ marginBottom: "3rem", height: "15rem" }}
       >
         <Stack direction="row" sx={{ gap: 2 }}>
           {otherProjects.map((otherProject, index) => (
@@ -104,11 +131,18 @@ const Projects = () => {
               <StyledSkillText sx={{ fontSize: "1.2rem" }}>
                 {otherProject}
               </StyledSkillText>
-              <StyledButton
-                sx={{ marginBottom: "2rem", width: "15rem", height: "2rem" }}
+              <a
+                href={otherProjectsLinks[index]}
+                target="_blank"
+                rel="noreferrer"
+                style={{ textDecoration: "none" }}
               >
-                Visit
-              </StyledButton>
+                <StyledButton
+                  sx={{ marginBottom: "2rem", width: "15rem", height: "2rem" }}
+                >
+                  Visit
+                </StyledButton>
+              </a>
             </StyledSkillCard>
           ))}
         </Stack>
