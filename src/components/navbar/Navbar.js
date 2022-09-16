@@ -1,21 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Toolbar, Stack, Box } from "@mui/material";
-import ProfileContext from "../../context/ProfileContext";
 import { useNavigate } from "react-router-dom";
 import {
   StyledButton,
   StyledLogo,
   StyledNavLinks,
-  StyledSwitch,
 } from "../../styles/styles";
 
 const Navbar = () => {
-  const { darkMode, setDarkMode } = useContext(ProfileContext);
   const navigate = useNavigate();
-
-  const handleChange = (e) => {
-    setDarkMode(e.target.checked);
-  };
 
   return (
     <Box>
@@ -28,7 +21,6 @@ const Navbar = () => {
           }}
         >
           <StyledLogo>Manzar Hassan</StyledLogo>
-          <StyledSwitch checked={darkMode} onChange={handleChange} />
         </Stack>
         <Box
           sx={{

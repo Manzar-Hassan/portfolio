@@ -1,6 +1,5 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import { ProfileProvider } from "../../context/ProfileContext";
 import Dashboard from "../../pages/dashboard/Dashboard";
 import About from "../../pages/about/About";
 import Contact from "../../pages/contact/Contact";
@@ -14,19 +13,17 @@ const AnimatedRoutes = () => {
 
   return (
     <AnimatePresence>
-      <ProfileProvider>
-        <Theme>
-          <Routes location={location} key={location.key}>
-            <Route path="/" element={<SharedContent />}>
-              <Route index element={<Dashboard />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/about" element={<About />} />
-            </Route>
-          </Routes>
-        </Theme>
-      </ProfileProvider>
+      <Theme>
+        <Routes location={location} key={location.key}>
+          <Route path="/" element={<SharedContent />}>
+            <Route index element={<Dashboard />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/about" element={<About />} />
+          </Route>
+        </Routes>
+      </Theme>
     </AnimatePresence>
   );
 };

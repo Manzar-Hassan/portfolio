@@ -1,4 +1,4 @@
-import { Button, Fab, Paper, styled, Switch, Typography } from "@mui/material";
+import { Button, Fab, Paper, styled, Typography } from "@mui/material";
 
 // ---------------------------------Navbar---------------------
 
@@ -9,16 +9,16 @@ export const StyledLogo = styled("h3")({
 });
 
 // switch button
-export const StyledSwitch = styled(Switch)(({ theme }) => ({
-  "& .MuiSwitch-switchBase": {
-    color: theme.orange,
+// export const StyledSwitch = styled(Switch)(({ theme }) => ({
+//   "& .MuiSwitch-switchBase": {
+//     color: theme.orange,
 
-    "& + .MuiSwitch-track": {
-      opacity: 1,
-      backgroundColor: theme.yellow,
-    },
-  },
-}));
+//     "& + .MuiSwitch-track": {
+//       opacity: 1,
+//       backgroundColor: theme.yellow,
+//     },
+//   },
+// }));
 
 // contact me button
 export const StyledButton = styled(Button)(({ theme }) => ({
