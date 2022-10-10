@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Typography, Stack } from "@mui/material";
+import { Box, Grid, Typography, Stack, Divider } from "@mui/material";
 import Marquee from "react-fast-marquee";
 import { SiCodeproject } from "react-icons/si";
 import { motion } from "framer-motion";
@@ -9,7 +9,7 @@ import {
   projectNamesLinks,
   otherProjects,
   otherProjectsLinks,
-  projects
+  projects,
 } from "../../data/Data";
 import {
   StyledBlueEffect,
@@ -22,33 +22,25 @@ const Projects = () => {
   return (
     <>
       <motion.div
-        initial={{ x: "100%", opacity: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          transition: {
-            type: "spring",
-            mass: 0.4,
-            damping: 8,
-            when: "beforeChildren",
-            staggerChildren: 0.4,
-          },
-        }}
-        exit={{ x: "-100%", transition: { ease: "easeOut" } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
-        <StyledSkillText variant="h4" my={3} sx={{ marginBottom: "2rem" }}>
-          My work
-        </StyledSkillText>
+        <Divider>
+          <StyledSkillText variant="h4" my={3} sx={{ marginBottom: "2rem" }}>
+            My work
+          </StyledSkillText>
+        </Divider>
         <Grid
           container
           spacing={5}
           sx={{ justifyContent: "center", position: "relative" }}
         >
           <StyledBlueEffect
-            style={{ background: "#edd0ff", top: "-8%", left: "-10%" }}
+            style={{ background: "#edd0ff", top: 0, left: 0 }}
           />
           <StyledBlueEffect
-            sx={{ background: "#c1f5ff", top: "25rem", left: "86%" }}
+            sx={{ background: "#c1f5ff", top: "25rem", right: 0 }}
           />
           {projects.map((project, index) => (
             <Grid item xs={12} md={6} key={index}>

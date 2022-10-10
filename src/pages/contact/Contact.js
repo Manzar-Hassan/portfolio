@@ -63,19 +63,9 @@ const Contact = () => {
   return (
     <>
       <motion.div
-        initial={{ x: "100%", opacity: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          transition: {
-            type: "spring",
-            mass: 0.4,
-            damping: 8,
-            when: "beforeChildren",
-            staggerChildren: 0.4,
-          },
-        }}
-        exit={{ x: "-100%", transition: { ease: "easeOut" } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <Grid container spacing={2} mt={10}>
           <Grid item xs={12} md={6} sx={{ position: "relative" }}>

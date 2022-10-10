@@ -1,31 +1,20 @@
 import React from "react";
 import { Tooltip, Typography } from "@mui/material";
-import Resume from "../../assets/Resume.pdf";
 import {
   StyledAboutCard,
   StyledBlueEffect,
   StyledDownloadButton,
 } from "../../styles/styles";
-import { FaDownload } from "react-icons/fa";
+import { BsList } from "react-icons/bs";
 import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <>
       <motion.div
-        initial={{ x: "100%", opacity: 0 }}
-        animate={{
-          x: 0,
-          opacity: 1,
-          transition: {
-            type: "spring",
-            mass: 0.4,
-            damping: 8,
-            when: "beforeChildren",
-            staggerChildren: 0.4,
-          },
-        }}
-        exit={{ x: "-100%", transition: { ease: "easeOut" } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
       >
         <Typography variant="h4" sx={{ textAlign: "center" }} my={5}>
           About me
@@ -57,8 +46,13 @@ const About = () => {
         }}
       >
         <StyledDownloadButton>
-          <a href={Resume} download="Resume" style={{ color: "inherit" }}>
-            <FaDownload />
+          <a
+            href="https://drive.google.com/file/d/1RMPhIMEVHUFsHD17yGTf7UVHzBuHSOqE/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer"
+            style={{ color: "inherit" }}
+          >
+            <BsList style={{ height: "1.2rem", width: "1.2rem" }} />
           </a>
         </StyledDownloadButton>
       </Tooltip>

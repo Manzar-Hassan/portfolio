@@ -96,8 +96,9 @@ export const StyledBlueEffect = styled("div")({
 
 export const StyledSkillText = styled(Typography)(({ theme }) => ({
   textAlign: "center",
-  fontWeight: 600,
+  fontWeight: 400,
   color: theme.black,
+  fontSize: "2rem",
 }));
 
 // ------------------------------------------skills cards------------------------------
@@ -113,7 +114,7 @@ export const StyledSkillCard = styled(Paper)({
   borderRadius: "15px",
   border: "rgba(255,255,255,0.3)",
   background: "rgba(255,255,255,0.2)",
-  backdropFilter: "blur(5px)",
+  minWidth: "10rem",
 });
 
 // ------------------------------------------About page styled card---------------------------
