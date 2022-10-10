@@ -20,12 +20,14 @@ import { DiMysql, DiHeroku } from "react-icons/di";
 import { FaUniversity, FaSearchLocation } from "react-icons/fa";
 import { MdOutlineInventory2 } from "react-icons/md";
 import { GiTicket } from "react-icons/gi";
+import { GiHoneycomb } from "react-icons/gi";
 
 export const aboutProject = [
   "An Application for billing customer products",
   "An Application to prdict the country of anyone's name",
   "An Application for student's complain,food and lost & found items",
   "An Application for booking movie tickets online",
+  "An Application for chatting with their loved ones"
 ];
 
 export const projectNames = [
@@ -33,6 +35,7 @@ export const projectNames = [
   "Find me",
   "All-in-one Application",
   "Book your seat",
+  "Chat-Bees"
 ];
 
 export const projects = [
@@ -40,6 +43,7 @@ export const projects = [
   <FaSearchLocation style={{ fontSize: "10rem", color: "#f99f38" }} />,
   <FaUniversity style={{ fontSize: "10rem", color: "#f99f38" }} />,
   <GiTicket style={{ fontSize: "10rem", color: "#f99f38" }} />,
+  <GiHoneycomb style={{ fontSize: "10rem", color: "#f99f38" }} />,
 ];
 
 export const projectNamesLinks = [
@@ -47,6 +51,7 @@ export const projectNamesLinks = [
   "https://find-me-05-v2.netlify.app",
   "https://all-in-one-05.netlify.app",
   "https://live-tv-05.netlify.app",
+  "https://chat-bees-05.netlify.app/"
 ];
 
 export const otherProjects = [
