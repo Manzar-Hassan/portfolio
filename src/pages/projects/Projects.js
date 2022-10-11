@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Grid, Typography, Stack, Divider } from "@mui/material";
 import Marquee from "react-fast-marquee";
-import { SiCodeproject } from "react-icons/si";
+import { AiOutlineProject } from "react-icons/ai";
 import { motion } from "framer-motion";
 import {
   aboutProject,
@@ -10,6 +10,8 @@ import {
   otherProjects,
   otherProjectsLinks,
   projects,
+  otherProjectsGithubLinks,
+  githubProjectLinks,
 } from "../../data/Data";
 import {
   StyledBlueEffect,
@@ -45,34 +47,52 @@ const Projects = () => {
           {projects.map((project, index) => (
             <Grid item xs={12} md={6} key={index}>
               <StyledSkillCard elevation={5} sx={{ gap: 3 }}>
-                <StyledSkillText sx={{ fontSize: "1.5rem", marginTop: "1rem" }}>
+                <StyledSkillText
+                  sx={{ fontSize: "1.5rem", marginTop: "1rem" }}
+                  component="div"
+                >
                   {projectNames[index]}
+                  <br />
+                  <Typography component="div">
+                    (A MERN Stack Project)
+                  </Typography>
                 </StyledSkillText>
                 <Box>{project}</Box>
-                <Typography>{aboutProject[index]}</Typography>
-                <a
-                  href={projectNamesLinks[index]}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
-                  <StyledButton
-                    sx={{
-                      marginBottom: "2rem",
-                      width: "7rem",
-                      height: "2.5rem",
-                    }}
-                  >
-                    Visit
-                  </StyledButton>
-                </a>
+                <Typography component="div">{aboutProject[index]}</Typography>
+                <div>
+                  <div style={{ display: "flex", gap: "1rem" }}>
+                    <StyledButton
+                      sx={{
+                        marginBottom: "2rem",
+                        width: "7rem",
+                        height: "2.5rem",
+                      }}
+                      href={projectNamesLinks[index]}
+                      target="_blank"
+                    >
+                      Visit
+                    </StyledButton>
+
+                    <StyledButton
+                      sx={{
+                        marginBottom: "2rem",
+                        width: "7rem",
+                        height: "2.5rem",
+                      }}
+                      href={githubProjectLinks[index]}
+                      target="_blank"
+                    >
+                      Github
+                    </StyledButton>
+                  </div>
+                </div>
               </StyledSkillCard>
             </Grid>
           ))}
         </Grid>
-        <StyledSkillText variant="h4" sx={{ marginTop: 7 }}>
-          My Other works
-        </StyledSkillText>
+        <Divider sx={{ marginTop: 7 }}>
+          <StyledSkillText variant="h4">My Other works</StyledSkillText>
+        </Divider>
         <Marquee
           pauseOnHover
           speed={100}
@@ -82,7 +102,7 @@ const Projects = () => {
             {otherProjects.map((otherProject, index) => (
               <StyledSkillCard
                 elevation={5}
-                sx={{ width: "25rem", height: "10rem" }}
+                sx={{ width: "20rem", height: "10rem" }}
                 key={index}
               >
                 <StyledSkillText
@@ -92,27 +112,34 @@ const Projects = () => {
                     padding: "0 1rem",
                   }}
                 >
-                  <SiCodeproject />
+                  <AiOutlineProject />
                 </StyledSkillText>
-                <StyledSkillText sx={{ fontSize: "1.2rem" }}>
+                <StyledSkillText sx={{ fontSize: "1rem" }}>
                   {otherProject}
                 </StyledSkillText>
-                <a
-                  href={otherProjectsLinks[index]}
-                  target="_blank"
-                  rel="noreferrer"
-                  style={{ textDecoration: "none" }}
-                >
+                <Box sx={{display:"flex",gap:"1rem"}}>
                   <StyledButton
                     sx={{
                       marginBottom: "2rem",
-                      width: "15rem",
                       height: "2rem",
                     }}
+                    href={otherProjectsLinks[index]}
+                    target="_blank"
                   >
                     Visit
                   </StyledButton>
-                </a>
+
+                  <StyledButton
+                    sx={{
+                      marginBottom: "2rem",
+                      height: "2rem",
+                    }}
+                    href={otherProjectsGithubLinks[index]}
+                    target="_blank"
+                  >
+                    Github
+                  </StyledButton>
+                </Box>
               </StyledSkillCard>
             ))}
           </Stack>

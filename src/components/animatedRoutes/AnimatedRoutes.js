@@ -7,6 +7,7 @@ import Projects from "../../pages/projects/Projects";
 import Skills from "../../pages/skills/Skills";
 import Theme from "../../themes/Theme";
 import SharedContent from "../../helper/SharedContent";
+import Error from "../../pages/error/Error";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -21,6 +22,7 @@ const AnimatedRoutes = () => {
             <Route path="/skills" element={<Skills />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/error" element={<Error />} />
           </Route>
         </Routes>
       </Theme>

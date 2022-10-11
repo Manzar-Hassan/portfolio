@@ -54,18 +54,39 @@ export const projectNamesLinks = [
   "https://chat-bees-05.netlify.app/"
 ];
 
+export const githubProjectLinks = [
+  "https://github.com/Manzar-Hassan/inventory-billing-frontend.git",
+  "https://github.com/Manzar-Hassan/find-me-app-updated.git",
+  "https://github.com/Manzar-Hassan/all-in-one-hacksprint-frontend.git",
+  "https://github.com/Manzar-Hassan/guvi-hackathon-2-frontend.git",
+  "https://github.com/Manzar-Hassan/chat-bees-frontend.git"
+]
+
 export const otherProjects = [
-  "Library management app",
-  "Student admin app",
-  "Users crud app",
-  "Search movie app",
-  "random quotes app",
-  "country and weather app",
-  "calculator",
-  "pagination",
-  "discord login page",
-  "loading screen",
+  "Library management app (MERN Stack)",
+  "Student admin app (MERN Stack)",
+  "Users crud app (MERN Stack)",
+  "Search movie app (MERN Stack)",
+  "random quotes app (HTML and js)",
+  "country and weather app (ajax)",
+  "calculator (ajax)",
+  "pagination (ajax)",
+  "discord login page (ajax)",
+  "loading screen (HTML & CSS)",
 ];
+
+export const otherProjectsGithubLinks = [
+  "https://github.com/Manzar-Hassan/library-management.git",
+  "https://github.com/Manzar-Hassan/student-teacher-db.git",
+  "https://github.com/Manzar-Hassan/react-users.git",
+  "https://github.com/Manzar-Hassan/react-my-movies.git",
+  "/error",
+  "/error",
+  "/error",
+  "/error",
+  "/error",
+  "/error"
+]
 
 export const otherProjectsLinks = [
   "https://library-05.netlify.app/",
