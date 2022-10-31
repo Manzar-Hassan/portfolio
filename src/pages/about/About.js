@@ -47,7 +47,7 @@ const About = () => {
       >
         <StyledDownloadButton>
           <a
-            href="https://drive.google.com/file/d/1FRCYkZhGUa_be--t3kkbffF9V23u_pfZ/view?usp=share_lin"
+            href="https://drive.google.com/file/d/1FRCYkZhGUa_be--t3kkbffF9V23u_pfZ/view?usp=share_link"
             target="_blank"
             rel="noreferrer"
             style={{ color: "inherit" }}
