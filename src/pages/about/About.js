@@ -21,7 +21,7 @@ const About = () => {
         </Typography>
         <StyledAboutCard>
           <Typography sx={{ fontSize: "1.2rem", textAlign: "center" }}>
-            I'm a Passionate full-stack developer with 3+ years of hands on
+            I'm a Passionate full-stack developer with 8+ months of hands on
             experience in developing scalable websites/applications using a wide
             range of frontend and backend skills. I had participate in 3
             Hacakathons and I'm very happy with the result as well as the
